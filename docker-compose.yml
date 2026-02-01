@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: localconnect-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: localconnect
+    ports:
+      - "5430:5432"
+    volumes:
+      - localconnect_pgdata:/var/lib/postgresql/data
+
+volumes:
+  localconnect_pgdata:
