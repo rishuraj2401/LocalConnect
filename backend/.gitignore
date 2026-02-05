@@ -19,8 +19,8 @@ go.work
 # Environment variables
 .env
 
+./media/
 # Media uploads
-media/
 test-media/
 
 # Test coverage
